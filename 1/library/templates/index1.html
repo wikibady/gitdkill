@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<link rel="stylesheet" type="text/css" href="./static/css/main.css">
+	<link rel="stylesheet" type="text/css" href="http://lib.sinaapp.com/js/bootstrap/latest/css/bootstrap.min.css">
+	<link rel="stylesheet" type="text/css" href="http://lib.sinaapp.com/js/bootstrap/latest/css/bootstrap.min.css">
+	<title>BDlibrary</title>
+</head>
+<body>
+<div class="authorlist">
+<h1>作者列表</h1>
+{% for author in AuthorList %}
+	<h2>ID：{{author.AulthorID}}</h2>
+	<p>姓名：{{author.Name}}</p>
+	<p>国籍：{{author.Country}}</p>
+	<p>出生年：{{author.Age}}</p>
+{% endfor %}
+</div>
+<div class="booklist">
+	<h1>书籍列表</h1>
+	{% for book in BookList %}
+	<h2>ID：{{book.ISBN}}</h2>
+	<p>书名：{{book.Title}}</p>
+	<p>作者编号：{{book.AulthorID_id}}</p>
+	<p>出版社：{{book.Publisher}}</p>
+	<p>出版日期：{{book.PublishDate}}</p>
+	<p>价格：{{book.Price}}</p>
+	<form action="/DelBook" method="post">  
+		  <input name="DelBook_ISBN" type="hidden" value={{book.ISBN}}>  
+    	  <input type="submit" value="删除" >  
+	</form>
+	<form action="/UpdateBook" method="post">  
+		  <input name="DelBook_ISBN" type="hidden" value={{book.ISBN}}>  
+    	  <input type="submit" value="更新" >  
+	</form>    
+{% endfor %}
+</div>
+<div class="add">
+	<h3>新增书籍</h3>
+	<form action="/AddBook" method="post">  
+		  请输入书号<input name="book_ISBN" type="text" >  
+          请输入书名<input name="book_name" type="text" >  
+          请输入作者ID<input name="book_authorID" type="text" >  
+          请输入出版社<input name="book_publisher" type="text" >
+          请输入出版日期<input name="book_date" type="date" >
+          请输入价格<input name="book_price" type="text" >
+    	  <input type="submit" value="提交" >  
+	</form>  
+</div>
+<div class="FindByAuthor">
+	<form action="/FindByAuthor" method="post">  
+          请输入作者姓名<input name="author_name" type="text">
+    	  <input type="submit" value="提交" > 
+    </form>
+</div>
+</body>
+</html>

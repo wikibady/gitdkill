@@ -1,0 +1,42 @@
+body {
+	background-image: url(http://7xnvf5.com1.z0.glb.clouddn.com/bg.jpg);
+	background-repeat:repeat;
+}
+table {
+	text-align:center;
+}
+.head{
+	position: relative;
+	margin: 10% auto auto auto;
+	text-align: center;
+	
+}
+.head h1{
+	font-family:"微软雅黑","黑体","宋体";
+	font-size: 50px;
+}
+.main{
+	position: relative;
+	margin: 5% auto auto auto;
+	width: 70%;
+	height: auto;
+}
+.options{
+	
+}
+.options select{
+	margin-left: auto;
+	margin-right: auto;
+	width: auto;
+	height: 30px;
+	
+}
+.buttom{
+	margin: 2% auto;
+}
+.add{
+	position: relative;
+	margin: 5% auto auto 10%;
+	width: 70%;
+	height: auto;
+}

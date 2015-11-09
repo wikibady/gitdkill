@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>UpdateBook</title>
+	<link rel="stylesheet" type="text/css" href="./static/css/UpdateBook.css">
+</head>
+<body>
+	<div class="add">
+		<h3>更新书籍</h3>
+		<form action="/UpdateBook2" method="post">  
+			  请输入书号<input name="book_ISBN" type="text" readonly="readonly" value={{book.ISBN}}>  
+	          请输入书名<input name="book_name" type="text" readonly="readonly" value={{book.Title}}>  
+	          请输入作者ID<input name="book_authorID" type="text" value={{book.AulthorID_id}}>  
+	          请输入出版社<input name="book_publisher" type="text" value={{book.Publisher}}>
+	          请输入出版日期<input name="book_date" type="date" value={{book.PublishDate}}>
+	          请输入价格<input name="book_price" type="text" value={{book.Price}}>
+	    	  <input type="submit" value="提交" >  
+		</form>  
+	</div>
+</body>
+</html>

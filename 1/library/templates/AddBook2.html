@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<link rel="stylesheet" type="text/css" href="./static/css/main.css">
+	<link href="http://libs.baidu.com/bootstrap/3.0.3/css/bootstrap.min.css" rel="stylesheet">
+    <script src="http://libs.baidu.com/jquery/2.0.0/jquery.min.js"></script>
+    <script src="http://libs.baidu.com/bootstrap/3.0.3/js/bootstrap.min.js"></script>
+	<title>添加书籍</title>
+</head>
+<body>
+<div class="head">
+	<h1>图书管理系统</h1>
+	<h2>您所添加的书籍的作者还没有录入，请添加</h2>
+</div>
+	<div class="add">
+		<form action="/AddBook2" class="form-horizontal"method="post">
+				<div class="bookinfo">
+					<table class="table table-hover table-striped table-bordered table-condensed">
+					   <caption>书籍信息</caption>
+					   <thead>
+					      <tr class="success">
+					         <th>书名</th>
+					         <th>出版社</th>
+					         <th>出版日期</th>
+					         <th>价格</th>
+					      </tr>
+					   </thead>
+					   <tbody>
+					      <tr class="warning">
+							<td><input name="book_name" value={{book_name}} readonly="readonly"></td>
+							<td><input name="book_publisher" value={{book_publisher}} readonly="readonly"></td>
+							<td><input name="book_date" value={{book_date}} readonly="readonly"></td>
+							<td><input name="book_price" value={{book_price}} readonly="readonly"></td> 
+					      </tr>
+					   </tbody>
+					</table>
+				</div>
+			<div class="form-group">
+    			<label for="authorname" class="col-sm-2 control-label">作者</label>
+		  		<div class="col-sm-10">
+		  		<input class="form-control" name="author_name" type="text" id="aut horname" placeholder="请输入作者">
+		  		</div>
+		  	</div>  
+		  	<div class="form-group">
+    			<label for="inputauthor" class="col-sm-2 control-label">作者ID</label>
+    			<div class="col-sm-10">
+		  		<input class="form-control" name="author_ID" type="text" id="inputauthor" value= {{AulthorID}} readonly="readonly">
+		  		</div>
+		  	</div>  
+		  	<div class="form-group">
+    			<label for="inputauthor" class="col-sm-2 control-label">出生日期</label>
+    			<div class="col-sm-10">
+		  		<input class="form-control" name="author_age" type="date" id="inputauthor" placeholder="请输入出生日期">
+		  		</div>
+		  	</div> 
+		  	<div class="form-group">
+    			<label for="inputprice" class="col-sm-2 control-label">国籍</label>
+    			<div class="col-sm-10">
+		  		<input class="form-control" name="author_country" type="text" id="inputprice" placeholder="请输入国籍">
+		  		</div>
+		  	</div> 
+    	    <div class="form-group">
+			    <div class="col-sm-offset-2 col-sm-10">
+			      <button type="submit" class="btn btn-danger btn-lg btn-block">添加</button>
+			    </div>
+  		    </div>	
+		 </form>
+	</div>
+
+</body>
+</html>
